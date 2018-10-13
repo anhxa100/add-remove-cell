@@ -21,7 +21,7 @@ class CollapeTableViewController: UITableViewController {
         sections = simpleSections
         
         
-       
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -48,9 +48,9 @@ class CollapeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PseudoHeaderTableViewCell
-            if indexPath.row == 0 {
-                cell.titleLabel.text = sections[indexPath.section].items[indexPath.row]
-        }
+        
+        cell.titleLabel.text = sections[indexPath.section].items[indexPath.row]
+        
         return cell
     }
     
@@ -75,14 +75,10 @@ class CollapeTableViewController: UITableViewController {
         return 1.0
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.row == 0 {
-//
-//            //            myBoolean[indexPath.section] = !myBoolean[indexPath.section]
-//            tableView.reloadSections([indexPath.section], with: .automatic)
-//        }
-//    }
-//    
+    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+    //    }
+    
     
 }
 extension CollapeTableViewController: CollapsibleTableViewHeaderDelegate {

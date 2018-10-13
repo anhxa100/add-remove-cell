@@ -15,7 +15,7 @@ protocol CollapsibleTableViewHeaderDelegate {
 class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
 
    let textFieldTitle = UILabel()
-    let arrowLabel = UILabel()
+//    let arrowLabel = UILabel()
 //    @IBOutlet weak var textFieldTitle: UILabel!
     
     
@@ -24,12 +24,9 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-       
-//        contentView.addSubview(textFieldTitle)
-//        contentView.addSubview(arrowLabel)
         
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CollapsibleTableViewHeader.tapHeader(_:))))
-//        contentView.backgroundColor = UIColor
+
     }
     @objc func tapHeader(_ gestureRecognizers : UITapGestureRecognizer) {
         guard let cell = gestureRecognizers.view as? CollapsibleTableViewHeader else {

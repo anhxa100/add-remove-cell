@@ -16,7 +16,7 @@ class Section {
     init(list: String, items: [String]) {
         self.list = list
         self.items = items
-        self.collaped = false
+        self.collaped = true
     }
 }
 
